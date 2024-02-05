@@ -1,24 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import success from "./assets/indir (1).png"
+import error from "./assets/images.jpeg"
+import info from "./assets/indir.png"
+import AlertMessage from './components/AlertMessage';
+
 
 function App() {
+
+  const alertMessages = [
+    {
+      alert: "success",
+      message: "Ugurlu emeliyyat",
+      clas:"success"
+    },
+    {
+      alert: "error",
+      message: "Emeliyyat ugursuz oldu",
+      clas:"error"
+    },
+    {
+      alert: "info",
+      message: "Emeliyyat davam edir...",
+      clas:"info"
+    }
+  ];
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    {alertMessages.map((item) => (
+
+        <AlertMessage
+        message={item.message}
+        clas = {item.clas}
+        foto = {item.alert === "success" ? success : item.alert === "error" ? error : info}
+        />
+
+    ))}
+    </>
   );
 }
 

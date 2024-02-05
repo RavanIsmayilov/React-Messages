@@ -1,0 +1,40 @@
+
+.error{
+    color: red;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+    
+}
+.success{
+    color: green;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    font-size: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+    
+}
+.info{
+    color: black;
+    width: 100%;
+    height: 400px;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+
+}
